@@ -25,7 +25,7 @@ col1, col2, col3 = st.columns([1, 1, 1])  # Création de trois colonnes
 with col2:
     st.image("image/Photo_Romain_Traboul.jpg", width=500)
 
-with col4:
+with col3:
     # Sélecteur de langue
     langue = st.radio("🌍 Choisissez votre langue :", ["Français", "English"])
 
