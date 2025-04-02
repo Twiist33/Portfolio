@@ -19,7 +19,7 @@ st.markdown(
     unsafe_allow_html=True)
 
 # Utilisation de st.columns pour centrer l'image
-col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])  # Création de trois colonnes
+col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 4, 1, 1, 1])  # Création de trois colonnes
 
 # Placer l'image dans la colonne du milieu
 with col3:
