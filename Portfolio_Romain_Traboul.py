@@ -23,7 +23,7 @@ col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])  # Création
 
 # Placer l'image dans la colonne du milieu
 with col3:
-    st.image("image/Photo_Romain_Traboul.jpg", width=200)
+    st.image("image/Photo_Romain_Traboul.jpg", width=250)
 
 with col6:
     # Sélecteur de langue
@@ -145,16 +145,16 @@ if langue == "Français":
         # Ajout des images sous la section
         col1, col2 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col1:
-            st.image("image/photo_competition.jpg", caption="Analyse d'une compétition", use_column_width=True)
+            st.image("image/photo_competition.jpg", caption="Analyse d'une compétition", use_container_width=True)
         with col2:
-            st.image("image/photo_equipe.jpg", caption="Analyse d'une équipe", use_column_width=True)
+            st.image("image/photo_equipe.jpg", caption="Analyse d'une équipe", use_container_width=True)
 
         # Ajout des images sous la section
         col3, col4 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col3:
-            st.image("image/photo_saison.jpg", caption="Analyse d'une sasion", use_column_width=True)
+            st.image("image/photo_saison.jpg", caption="Analyse d'une sasion", use_container_width=True)
         with col4:
-            st.image("image/photo_confrontation_equipe.jpg", caption="Analyse d'une opposition", use_column_width=True)
+            st.image("image/photo_confrontation_equipe.jpg", caption="Analyse d'une opposition", use_container_width=True)
 
         st.write("""
             - **Autre projets**
@@ -169,9 +169,9 @@ if langue == "Français":
         # Ajout des images sous la section
         col5, col6 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col5:
-            st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_column_width=True)
+            st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_container_width=True)
         with col6:
-            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_column_width=True)
+            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_container_width=True)
 
     # Section Mémoire
     with st.expander("📝 Mémoires"):
@@ -363,15 +363,15 @@ else:
         # Adding images below the section
         col1, col2 = st.columns(2)  # Creating two columns to align images
         with col1:
-            st.image("image/photo_competition.jpg", caption="Competition Analysis", use_column_width=True)
+            st.image("image/photo_competition.jpg", caption="Competition Analysis", use_container_width=True)
         with col2:
-            st.image("image/photo_equipe.jpg", caption="Team Analysis", use_column_width=True)
+            st.image("image/photo_equipe.jpg", caption="Team Analysis", use_container_width=True)
 
         col3, col4 = st.columns(2)  # Creating two columns to align images
         with col3:
-            st.image("image/photo_saison.jpg", caption="Season Analysis", use_column_width=True)
+            st.image("image/photo_saison.jpg", caption="Season Analysis", use_container_width=True)
         with col4:
-            st.image("image/photo_confrontation_equipe.jpg", caption="Head-to-Head Analysis", use_column_width=True)
+            st.image("image/photo_confrontation_equipe.jpg", caption="Head-to-Head Analysis", use_container_width=True)
 
         st.write("""
             - **Other Projects**
@@ -386,9 +386,9 @@ else:
         # Adding images below the section
         col5, col6 = st.columns(2)  # Creating two columns to align images
         with col5:
-            st.image("image/Argentina_France_Dashboard.png", caption="France-Argentina Match Dashboard", use_column_width=True)
+            st.image("image/Argentina_France_Dashboard.png", caption="France-Argentina Match Dashboard", use_container_width=True)
         with col6:
-            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_column_width=True)
+            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_container_width=True)
 
     # Section Mémoire
     with st.expander("📝 Mémoires"):
@@ -418,7 +418,7 @@ else:
         with col3:
             st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
             st.download_button(
-                label="M1",
+                label="Download M1",
                 data=memoire,
                 file_name="Mémoire_Romain_Traboul.pdf",
                 mime="application/pdf"
