@@ -208,7 +208,7 @@ if langue == "Français":
             """, unsafe_allow_html=True)
 
         # Utilisation de st.columns pour afficher le bouton centré
-        col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])  # Création de six colonnes
+        col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 1, 1])  # Création de six colonnes
 
         # Utilisation du bouton pour télécharger le mémoire de M1
         with col3:
@@ -412,7 +412,7 @@ else:
             """, unsafe_allow_html=True)
 
         # Utilisation de st.columns pour afficher le bouton centré
-        col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])  # Création de six colonnes
+        col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 1, 1])  # Création de six colonnes
 
         # Utilisation du bouton pour télécharger le mémoire de M1
         with col3:
