@@ -57,6 +57,11 @@ if langue == "Français":
         with col8:
             st.write("[**GitHub**](https://github.com/Twiist33)")
 
+        col9, col10 = st.columns([1, 4])
+        with col9:
+            st.image("image/tableau_icon.png", width=30)  # Icône pour GitHub
+        with col10:
+            st.write("[**Tableau**](https://public.tableau.com/app/profile/romain.traboul/vizzes)")
 
     # Section Expérience
     with st.expander("💼 Expérience"):
@@ -229,7 +234,7 @@ if langue == "Français":
         with col1:
             st.image("image/programmation-logo.png", width=30)
         with col2:
-            st.write("**Langages de programmation :** Python, R, Excel")
+            st.write("**Langages de programmation / Outils de visualisation :** Python, R, Excel, Tableau")
 
         with col1:
             st.image("image/library-logo.png", width=30)
@@ -277,6 +282,12 @@ else:
             st.image("image/github_icon.png", width=30)  # Icon for GitHub
         with col8:
             st.write("[**GitHub**](https://github.com/Twiist33)")
+
+        col9, col10 = st.columns([1, 4])
+        with col9:
+            st.image("image/tableau_icon.png", width=30)  # Icône pour GitHub
+        with col10:
+            st.write("[**Tableau**](https://public.tableau.com/app/profile/romain.traboul/vizzes)")
 
     # Experience Section
     with st.expander("💼 Experience"):
@@ -433,7 +444,7 @@ else:
         with col1:
             st.image("image/programmation-logo.png", width=30)
         with col2:
-            st.write("**Programming Languages:** Python, R, Excel")
+            st.write("**Programming Languages / Visualization tools :** Python, R, Excel, Tableau")
 
         with col1:
             st.image("image/library-logo.png", width=30)
