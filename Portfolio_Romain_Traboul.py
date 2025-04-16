@@ -157,7 +157,7 @@ if langue == "Français":
         # Ajout des images sous la section
         col3, col4 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col3:
-            st.image("image/photo_saison.jpg", caption="Analyse d'une sasion", use_container_width=True)
+            st.image("image/photo_saison.jpg", caption="Analyse d'une saison", use_container_width=True)
         with col4:
             st.image("image/photo_confrontation_equipe.jpg", caption="Analyse d'une opposition", use_container_width=True)
 
