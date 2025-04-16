@@ -164,8 +164,9 @@ if langue == "Français":
         st.write("""
             - **Autre projets**
                 <ul>
+                    <li><a href="https://public.tableau.com/app/profile/romain.traboul/viz/Big5Stats/Big5OffensivesStats">Dashboard sur les 5 grands championnats sur Tableau</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Dashboard_France_Argentine">Dashboard France_Argentine</a></li>
-                    <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Visualisation_big_5">Visualisation sur les 5 grands championnats</a></li>
+                    <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Visualisation_big_5">Visualisation sur les 5 grands championnats sur Python</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Dangerosité_Choc_Rugby">Projet Prediction Dangerosité Choc Rugby</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Score_du_match">Projet Prediction Score du match</a></li>
                 </ul>      
@@ -177,6 +178,12 @@ if langue == "Français":
             st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_container_width=True)
         with col6:
             st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_container_width=True)
+
+        col7, col8 = st.columns(2)  # Création de deux colonnes pour aligner les images
+        with col7:
+            st.image("image/big5_stats_24_25.png", caption="Dashboard des statistiques sur les 5 grands championnats sur la saison 24/25 (Offensif)", use_container_width=True)
+        with col8:
+            st.image("image/diff_goals_xg_24_25.png", caption="Graphique des joueurs superformant le plus leur Xg sur la saison 24/25", use_container_width=True)
 
     # Section Mémoire
     with st.expander("📝 Mémoires"):
@@ -387,8 +394,9 @@ else:
         st.write("""
             - **Other Projects**
                 <ul>
+                    <li><a href="https://public.tableau.com/app/profile/romain.traboul/viz/Big5Stats/Big5OffensivesStats">Dashboard of the Big 5 Leagues on Tableau</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Dashboard_France_Argentine">France-Argentina Dashboard</a></li>
-                    <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Visualisation_big_5">Visualization of the Big 5 Leagues</a></li>
+                    <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Visualisation_big_5">Visualization of the Big 5 Leagues on Python</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Dangerosité_Choc_Rugby">Rugby Collision Danger Prediction Project</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Score_du_match">Match Score Prediction Project</a></li>
                 </ul>      
@@ -401,6 +409,12 @@ else:
         with col6:
             st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_container_width=True)
 
+        col7, col8 = st.columns(2)  # Création de deux colonnes pour aligner les images
+        with col7:
+            st.image("image/big5_stats_24_25.png", caption="Dashboard of statistics on the 5 major leagues for the 24/25 season (Offensive)", use_container_width=True)
+        with col8:
+            st.image("image/diff_goals_xg_24_25.png", caption="Graph of the players who superformed their Xg the most over the 24/25 season", use_container_width=True)
+            
     # Section Mémoire
     with st.expander("📝 Mémoires"):
         st.write("""
