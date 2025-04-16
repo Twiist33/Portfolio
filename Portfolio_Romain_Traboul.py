@@ -182,7 +182,7 @@ if langue == "Français":
         col7, col8 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col7:
             st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_container_width=True)
-        with col9:
+        with col8:
             st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_container_width=True)
 
 
