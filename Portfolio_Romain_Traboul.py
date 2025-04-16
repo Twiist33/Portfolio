@@ -175,15 +175,16 @@ if langue == "Français":
         # Ajout des images sous la section
         col5, col6 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col5:
-            st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_container_width=True)
+            st.image("image/big5_stats_24_25.png", caption="Dashboard des statistiques sur les 5 grands championnats sur la saison 24/25 (Offensif)", use_container_width=True)
         with col6:
-            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_container_width=True)
-
+            st.image("image/diff_goals_xg_24_25.png", caption="Graphique des joueurs superformant le plus leur Xg sur la saison 24/25", use_container_width=True)
+        
         col7, col8 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col7:
-            st.image("image/big5_stats_24_25.png", caption="Dashboard des statistiques sur les 5 grands championnats sur la saison 24/25 (Offensif)", use_container_width=True)
-        with col8:
-            st.image("image/diff_goals_xg_24_25.png", caption="Graphique des joueurs superformant le plus leur Xg sur la saison 24/25", use_container_width=True)
+            st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_container_width=True)
+        with col9:
+            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_container_width=True)
+
 
     # Section Mémoire
     with st.expander("📝 Mémoires"):
@@ -403,18 +404,18 @@ else:
             """, unsafe_allow_html=True)
 
         # Adding images below the section
-        col5, col6 = st.columns(2)  # Creating two columns to align images
+        col5, col6 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col5:
-            st.image("image/Argentina_France_Dashboard.png", caption="France-Argentina Match Dashboard", use_container_width=True)
-        with col6:
-            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_container_width=True)
-
-        col7, col8 = st.columns(2)  # Création de deux colonnes pour aligner les images
-        with col7:
             st.image("image/big5_stats_24_25.png", caption="Dashboard of statistics on the 5 major leagues for the 24/25 season (Offensive)", use_container_width=True)
-        with col8:
+        with col6:
             st.image("image/diff_goals_xg_24_25.png", caption="Graph of the players who superformed their Xg the most over the 24/25 season", use_container_width=True)
             
+        col7, col8 = st.columns(2)  # Creating two columns to align images
+        with col7:
+            st.image("image/Argentina_France_Dashboard.png", caption="France-Argentina Match Dashboard", use_container_width=True)
+        with col8:
+            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_container_width=True)
+
     # Section Mémoire
     with st.expander("📝 Mémoires"):
         st.write("""
