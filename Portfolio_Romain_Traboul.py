@@ -413,7 +413,7 @@ else:
             """, unsafe_allow_html=True)
 
         # Adding images below the section
-        col5, col6 = st.columns(2)  # Création de deux colonnes pour aligner les images
+        col5, col6 = st.columns(2)  # Creating two columns to align images
         with col5:
             st.image("image/big5_stats_24_25.png", caption="Dashboard of statistics on the 5 major leagues for the 24/25 season (Offensive)", use_container_width=True)
         with col6:
@@ -425,7 +425,7 @@ else:
         with col8:
             st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_container_width=True)
 
-        col9, col10 = st.columns(2)  # Création de deux colonnes pour aligner les images
+        col9, col10 = st.columns(2)  #Creating two columns to align images
         with col9:
             st.image("image/Rennes_team_dashboard.jpg", caption="Dashboard of Rennes' behaviour by score over the 15/16 season", use_container_width=True)
         with col10:
