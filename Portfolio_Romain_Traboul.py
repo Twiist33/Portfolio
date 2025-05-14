@@ -188,9 +188,9 @@ if langue == "Français":
 
         col9, col10 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col9:
-            st.image("image/Rennes_team_dashboard.png", caption="Dashboard du comportement de Rennes selon le score sur la saison 15/16", use_container_width=True)
+            st.image("image/Rennes_team_dashboard.pdf", caption="Dashboard du comportement de Rennes selon le score sur la saison 15/16", use_container_width=True)
         with col10:
-            st.image("image/Rennes_opponents_dashboard.png", caption="Dashboard du comportement des adversaires de Rennes selon le score sur la saison 15/16", use_container_width=True)
+            st.image("image/Rennes_opponents_dashboard.pdf", caption="Dashboard du comportement des adversaires de Rennes selon le score sur la saison 15/16", use_container_width=True)
 
 
     # Section Mémoire
@@ -427,9 +427,9 @@ else:
 
         col9, col10 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col9:
-            st.image("image/Rennes_team_dashboard.png", caption="Dashboard of Rennes' behaviour by score over the 15/16 season", use_container_width=True)
+            st.image("image/Rennes_team_dashboard.pdf", caption="Dashboard of Rennes' behaviour by score over the 15/16 season", use_container_width=True)
         with col10:
-            st.image("image/Rennes_opponents_dashboard.png", caption="Dashboard of Rennes‘ opponents’ behaviour by score over the 15/16 season", use_container_width=True)
+            st.image("image/Rennes_opponents_dashboard.pdf", caption="Dashboard of Rennes‘ opponents’ behaviour by score over the 15/16 season", use_container_width=True)
 
     # Section Mémoire
     with st.expander("📝 Mémoires"):
