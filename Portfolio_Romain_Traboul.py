@@ -169,6 +169,7 @@ if langue == "Français":
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Visualisation_big_5">Visualisation sur les 5 grands championnats sur Python</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Dangerosité_Choc_Rugby">Projet Prediction Dangerosité Choc Rugby</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Score_du_match">Projet Prediction Score du match</a></li>
+                    <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Behavior_team_score_season_15_16">Projet Analyse du Comportement des équipes selon le score</a></li>
                 </ul>      
             """, unsafe_allow_html=True)
 
@@ -184,6 +185,12 @@ if langue == "Français":
             st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_container_width=True)
         with col8:
             st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_container_width=True)
+
+        col9, col10 = st.columns(2)  # Création de deux colonnes pour aligner les images
+        with col9:
+            st.image("image/Rennes_team_dashboard.png", caption="Dashboard du comportement de Rennes selon le score sur la saison 15/16", use_container_width=True)
+        with col10:
+            st.image("image/Rennes_opponents_dashboard.png", caption="Dashboard du comportement des adversaires de Rennes selon le score sur la saison 15/16", use_container_width=True)
 
 
     # Section Mémoire
@@ -400,6 +407,8 @@ else:
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Visualisation_big_5">Visualization of the Big 5 Leagues on Python</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Dangerosité_Choc_Rugby">Rugby Collision Danger Prediction Project</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Score_du_match">Match Score Prediction Project</a></li>
+                    <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Behavior_team_score_season_15_16">Project Analysis of behavior according the score</a></li>
+
                 </ul>      
             """, unsafe_allow_html=True)
 
@@ -415,6 +424,12 @@ else:
             st.image("image/Argentina_France_Dashboard.png", caption="France-Argentina Match Dashboard", use_container_width=True)
         with col8:
             st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_container_width=True)
+
+        col9, col10 = st.columns(2)  # Création de deux colonnes pour aligner les images
+        with col9:
+            st.image("image/Rennes_team_dashboard.png", caption="Dashboard of Rennes' behaviour by score over the 15/16 season", use_container_width=True)
+        with col10:
+            st.image("image/Rennes_opponents_dashboard.png", caption="Dashboard of Rennes‘ opponents’ behaviour by score over the 15/16 season", use_container_width=True)
 
     # Section Mémoire
     with st.expander("📝 Mémoires"):
