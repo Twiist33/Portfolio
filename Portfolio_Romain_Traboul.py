@@ -170,6 +170,7 @@ if langue == "Français":
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Dangerosité_Choc_Rugby">Projet Prediction Dangerosité Choc Rugby</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Score_du_match">Projet Prediction Score du match</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Behavior_team_score_season_15_16">Projet Analyse du Comportement des équipes selon le score</a></li>
+                    <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Prediction_goals_24_25">Projet Prédiction Nombre de buts inscrits sur R</a></li>
                 </ul>      
             """, unsafe_allow_html=True)
 
@@ -408,6 +409,7 @@ else:
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Dangerosité_Choc_Rugby">Rugby Collision Danger Prediction Project</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Projet_Prediction_Score_du_match">Match Score Prediction Project</a></li>
                     <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Behavior_team_score_season_15_16">Project Analysis of behavior according the score</a></li>
+                    <li><a href="https://github.com/Twiist33/Others_projects/tree/main/Prediction_goals_24_25">Project Prediction Number of goals scored on R</a></li>
 
                 </ul>      
             """, unsafe_allow_html=True)
