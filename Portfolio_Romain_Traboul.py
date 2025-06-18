@@ -121,8 +121,9 @@ if langue == "Français":
 
     # Section Projet
     with st.expander("🔨 Projets"):
+
         st.write("""
-            - **Projet de Data Visualisation des championnats de football français**
+            - **Projet de Data Visualisation d'analyse des performances des joueurs des 5 grands championnats**
             <div style="text-align: justify;">
             L'objectif de ce projet est de poursuivre le travail effectué lors de mon mémoire de M1 : <strong>Analyse comparative de 3 facteurs de performance dans le football : l'impact du 1er but, la distribution temporelle des buts et l’influence de l’avantage du terrain sur le match (domicile/extérieur) entre les équipes de jeunes (U17N et U19N)</strong>.  
             Ce mémoire s'articulant uniquement sur seulement 3 compétitions sur la saison 2022/2023, il m'a paru important d'étendre cette analyse en élargissant le nombre de compétitions et de saisons.  
@@ -160,6 +161,42 @@ if langue == "Français":
             st.image("image/photo_saison.jpg", caption="Analyse d'une saison", use_container_width=True)
         with col4:
             st.image("image/photo_confrontation_equipe.jpg", caption="Analyse d'une opposition", use_container_width=True)
+
+        st.write("""
+            - **Projet de Data Visualisation des championnats de football français**
+            <div style="text-align: justify;">
+            L'objectif de ce projet est de visualiser les performances des joueurs sur la saison 24/25. Issus du travail de la communauté Kaggle, les données proviennent de Fbref et Transfermarkt.
+            Ainsi, l'analyse portera sur la saison 24/25 pour les compétitions suivantes : Ligue 1, Bundesliga, Premier League, La Liga, Serie A.
+
+            Plusieurs fonctionnalités seront disponibles au sein de cette application web : 
+            <ul>
+                <li><strong>📊 Analyse d'un Joueur : Analyse du joueur de votre choix à travers plusieurs statistiques</li>
+                <li><strong>🥊 Comparaison entre Joueurs : Analyse comparative entre deux joueurs du même poste</li>
+                <li><strong>🏆 Classement des joueurs : Classement des joueurs par performance selon une statistique choisie</li>
+            </ul>
+            
+            <br><br>
+            Pour plus de détails sur ce projet, vous avez à votre disposition :  
+            <ul>
+                <li><a href="https://player-performance-big-5-24-25-romain-traboul.streamlit.app/">Le lien de l'application web</a></li>
+                <li><a href="https://github.com/Twiist33/Player_Performance">Le code associé à la création de l'application</a></li>
+            </ul>
+            </div>       
+            """, unsafe_allow_html=True)
+        
+        # Ajout des images sous la section
+        col1, col2 = st.columns(2)  # Création de deux colonnes pour aligner les images
+        with col1:
+            st.image("image/player_perf_fr.png", caption="Analyse d'une joueur", use_container_width=True)
+        with col2:
+            st.image("image/similarity_player_fr.png", caption="Analyse de joueurs similaires", use_container_width=True)
+
+        # Ajout des images sous la section
+        col3, col4 = st.columns(2)  # Création de deux colonnes pour aligner les images
+        with col3:
+            st.image("image/comparative_radar_fr.png", caption="Analyse de deux joueurs", use_container_width=True)
+        with col4:
+            st.image("image/ranking_ast_fr.png", caption="Analyse d'une statistique", use_container_width=True)
 
         st.write("""
             - **Autre projets**
@@ -387,6 +424,7 @@ else:
             </div>      
             """, unsafe_allow_html=True)
 
+
         # Adding images below the section
         col1, col2 = st.columns(2)  # Creating two columns to align images
         with col1:
@@ -399,6 +437,41 @@ else:
             st.image("image/photo_saison.jpg", caption="Season Analysis", use_container_width=True)
         with col4:
             st.image("image/photo_confrontation_equipe.jpg", caption="Head-to-Head Analysis", use_container_width=True)
+
+        st.write("""
+        - **French Football Leagues Data Visualization Project**
+        <div style="text-align: justify;">
+        The goal of this project is to visualize player performances during the 2024/2025 season. Based on work from the Kaggle community, the data is sourced from Fbref and Transfermarkt.  
+        This analysis focuses on the 2024/2025 season for the following competitions: Ligue 1, Bundesliga, Premier League, La Liga, and Serie A.
+
+        Several features are available within this web application:
+        <ul>
+            <li><strong>📊 Player Analysis:</strong> Analyze the player of your choice through various statistics</li>
+            <li><strong>🥊 Player Comparison:</strong> Comparative analysis between two players in the same position</li>
+            <li><strong>🏆 Player Rankings:</strong> Ranking of players based on performance for a selected statistic</li>
+        </ul>
+
+        <br><br>
+        For more details on this project, you can explore:
+        <ul>
+            <li><a href="https://player-performance-big-5-24-25-romain-traboul.streamlit.app/">The web application link</a></li>
+            <li><a href="https://github.com/Twiist33/Player_Performance">The code associated with the creation of the application</a></li>
+        </ul>
+        </div>    
+        """, unsafe_allow_html=True)
+
+        # Add images below the section
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image("image/player_perf_eng.png", caption="Player performance analysis", use_container_width=True)
+        with col2:
+            st.image("image/similarity_player_eng.png", caption="Player performance similarity", use_container_width=True)
+
+        col3, col4 = st.columns(2)
+        with col3:
+            st.image("image/comparative_radar_eng.png", caption="Radar comparison", use_container_width=True)
+        with col4:
+            st.image("image/ranking_ast_eng.png", caption="Statistical ranking analysis", use_container_width=True)
 
         st.write("""
             - **Other Projects**
