@@ -151,39 +151,56 @@ if langue == "Français":
         # Ajout des images sous la section
         col1, col2 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col1:
-            st.image("image/photo_competition.jpg", caption="Analyse d'une compétition", use_container_width=True)
+            st.image("image/photo_competition_fr.jpg", caption="Analyse d'une compétition", use_container_width=True)
         with col2:
-            st.image("image/photo_equipe.jpg", caption="Analyse d'une équipe", use_container_width=True)
+            st.image("image/photo_equipe_fr.jpg", caption="Analyse d'une équipe", use_container_width=True)
 
         # Ajout des images sous la section
         col3, col4 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col3:
-            st.image("image/photo_saison.jpg", caption="Analyse d'une saison", use_container_width=True)
+            st.image("image/photo_saison_fr.jpg", caption="Analyse d'une saison", use_container_width=True)
         with col4:
-            st.image("image/photo_confrontation_equipe.jpg", caption="Analyse d'une opposition", use_container_width=True)
+            st.image("image/photo_confrontation_equipe_fr.jpg", caption="Analyse d'une opposition", use_container_width=True)
 
-        st.write("""
+
+        st.write(
+            """
             - **Projet de Data Visualisation des championnats de football français**
-            <div style="text-align: justify;">
-            L'objectif de ce projet est de visualiser les performances des joueurs sur la saison 24/25. Issus du travail de la communauté Kaggle, les données proviennent de Fbref et Transfermarkt.
-            Ainsi, l'analyse portera sur la saison 24/25 pour les compétitions suivantes : Ligue 1, Bundesliga, Premier League, La Liga, Serie A.
+            <p style="text-align: justify;">
+            L'objectif de ce projet est de <strong>visualiser les performances des joueurs sur la saison 24/25</strong>.
+            Issus du travail de la communauté Kaggle, les données proviennent de :
+            <ul>
+                <li><a href="https://www.kaggle.com/datasets/hubertsidorowicz/football-players-stats-2024-2025" target="_blank">Fbref (Kaggle)</a></li>
+                <li><a href="https://www.kaggle.com/datasets/davidcariboo/player-scores" target="_blank">Transfermarkt (Kaggle)</a></li>
+            </ul>
+            </p>
 
-            Plusieurs fonctionnalités seront disponibles au sein de cette application web : 
+            <p style="text-align: justify;">
+            Ainsi, l'analyse portera sur la saison 24/25 pour les compétitions suivantes :
+            <strong>Ligue 1, Bundesliga, Premier League, La Liga, Serie A</strong>.
+            </p>
+
+            <br>
+
             <ul>
-                <li><strong>📊 Analyse d'un Joueur : Analyse du joueur de votre choix à travers plusieurs statistiques</li>
-                <li><strong>🥊 Comparaison entre Joueurs : Analyse comparative entre deux joueurs du même poste</li>
-                <li><strong>🏆 Classement des joueurs : Classement des joueurs par performance selon une statistique choisie</li>
+                <li><strong>📊 Analyse d'un Joueur</strong> : Analyse du joueur de votre choix à travers plusieurs statistiques</li>
+                <li><strong>🥊 Comparaison entre Joueurs</strong> : Analyse comparative entre deux joueurs du même poste</li>
+                <li><strong>🏆 Classement des joueurs (Stats de Base) </strong> : Classement des joueurs par performance selon une statistique de base choisie</li>
+                <li><strong>🥇 Classement des joueurs (Stats Avancées) </strong> : Classement des joueurs par performance selon une statistique avancée choisie</li>
+                <li><strong>🔎 Scouting </strong> : Établissement d'une liste de joueurs collant aux critères choisis</li>
             </ul>
-            
-            <br><br>
-            Pour plus de détails sur ce projet, vous avez à votre disposition :  
+
+            <br>
+
+            Pour plus de détails sur ce projet, vous avez à votre disposition :
             <ul>
-                <li><a href="https://player-performance-big-5-24-25-romain-traboul.streamlit.app/">Le lien de l'application web</a></li>
-                <li><a href="https://github.com/Twiist33/Player_Performance">Le code associé à la création de l'application</a></li>
+                <li><em>La documentation du projet</em></li>
+                <li><a href="https://player-performance-big-5-24-25-romain-traboul.streamlit.app/" target="_blank">Le code associé à l'application</a></li>
+                <li><em>Et enfin mon CV</em></li>
             </ul>
-            </div>       
-            """, unsafe_allow_html=True)
-        
+            """,
+            unsafe_allow_html=True
+        )
         # Ajout des images sous la section
         col1, col2 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col1:
@@ -428,38 +445,53 @@ else:
         # Adding images below the section
         col1, col2 = st.columns(2)  # Creating two columns to align images
         with col1:
-            st.image("image/photo_competition.jpg", caption="Competition Analysis", use_container_width=True)
+            st.image("image/photo_competition_eng.jpg", caption="Competition Analysis", use_container_width=True)
         with col2:
-            st.image("image/photo_equipe.jpg", caption="Team Analysis", use_container_width=True)
+            st.image("image/photo_equipe_eng.jpg", caption="Team Analysis", use_container_width=True)
 
         col3, col4 = st.columns(2)  # Creating two columns to align images
         with col3:
-            st.image("image/photo_saison.jpg", caption="Season Analysis", use_container_width=True)
+            st.image("image/photo_saison_eng.jpg", caption="Season Analysis", use_container_width=True)
         with col4:
-            st.image("image/photo_confrontation_equipe.jpg", caption="Head-to-Head Analysis", use_container_width=True)
+            st.image("image/photo_confrontation_equipe_eng.jpg", caption="Head-to-Head Analysis", use_container_width=True)
 
-        st.write("""
-        - **French Football Leagues Data Visualization Project**
-        <div style="text-align: justify;">
-        The goal of this project is to visualize player performances during the 2024/2025 season. Based on work from the Kaggle community, the data is sourced from Fbref and Transfermarkt.  
-        This analysis focuses on the 2024/2025 season for the following competitions: Ligue 1, Bundesliga, Premier League, La Liga, and Serie A.
 
-        Several features are available within this web application:
-        <ul>
-            <li><strong>📊 Player Analysis:</strong> Analyze the player of your choice through various statistics</li>
-            <li><strong>🥊 Player Comparison:</strong> Comparative analysis between two players in the same position</li>
-            <li><strong>🏆 Player Rankings:</strong> Ranking of players based on performance for a selected statistic</li>
-        </ul>
+        st.write(
+            """
+            - **French Football Leagues Data Visualization Project**
+            <p style="text-align: justify;">
+            The goal of this project is to <strong>visualize player performances during the 24/25 season</strong>.
+            Originally contributed by Kaggle users, the data comes from:
+            <ul>
+                <li><a href="https://www.kaggle.com/datasets/hubertsidorowicz/football-players-stats-2024-2025" target="_blank">Fbref dataset on Kaggle</a></li>
+                <li><a href="https://www.kaggle.com/datasets/davidcariboo/player-scores" target="_blank">Transfermarkt dataset on Kaggle</a></li>
+            </ul>
+            </p>
+            <p style="text-align: justify;">
+            The analysis will cover the 24/25 season for the following competitions:
+            <strong>Ligue 1, Bundesliga, Premier League, La Liga, Serie A</strong>.
+            </p>
 
-        <br><br>
-        For more details on this project, you can explore:
-        <ul>
-            <li><a href="https://player-performance-big-5-24-25-romain-traboul.streamlit.app/">The web application link</a></li>
-            <li><a href="https://github.com/Twiist33/Player_Performance">The code associated with the creation of the application</a></li>
-        </ul>
-        </div>    
-        """, unsafe_allow_html=True)
+            <br>
 
+            <ul>
+                <li><strong>📊 Player Analysis</strong>: Analyze the player of your choice through various statistics</li>
+                <li><strong>🥊 Player Comparison</strong>: Compare two players who play in the same position</li>
+                <li><strong>🏆 Player Ranking (Advanced Statistics) </strong>: Rank players based on a chosen advanced statistic</li>
+                <li><strong>🥇 Player Ranking (Basis Statistics) </strong>: Rank players based on a chosen basis statistic</li>
+                <li><strong>🔎 Scouting </strong> : Drawing up a list of players matching the chosen criteria</li>
+            </ul>
+
+            <br>
+
+            For more details about this project, you can refer to:
+            <ul>
+                <li><em>The project documentation</em></li>
+                <li><a href="https://player-performance-big-5-24-25-romain-traboul.streamlit.app/" target="_blank">The code used to build the application</a></li>
+                <li><em>My resume</em></li>
+            </ul>
+            """, unsafe_allow_html=True
+        )
         # Add images below the section
         col1, col2 = st.columns(2)
         with col1:
