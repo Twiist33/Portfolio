@@ -27,7 +27,7 @@ with col2:
 
 with col3:
     # Sélecteur de langue
-    langue = st.radio("🌍 Choisissez votre langue :", ["Français", "English"])
+    langue = st.radio("🌍 Choisissez votre langue / Choose your language :", ["Français", "English"])
 
 # Contenu basé sur la langue sélectionnée
 if langue == "Français":
