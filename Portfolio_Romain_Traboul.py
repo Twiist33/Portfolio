@@ -185,7 +185,7 @@ if langue == "Français":
             <ul>
                 <li><strong>📊 Analyse d'un Joueur</strong> : Analyse du joueur de votre choix à travers plusieurs statistiques</li>
                 <li><strong>🥊 Comparaison entre Joueurs</strong> : Analyse comparative entre deux joueurs du même poste</li>
-                <li><strong>🏆 Classement des joueurs (Stats Aggrégées) </strong> : Classement des joueurs par performance selon une statistique aggrégée choisie</li>
+                <li><strong>🏆 Classement des joueurs (Stats Aggrégées par Catégorie) </strong> : Classement des joueurs par performance selon une statistique aggrégée par catégorie choisie</li>
                 <li><strong>🥇 Classement des joueurs (Stats Brutes) </strong> : Classement des joueurs par performance selon une statistique brute choisie</li>
                 <li><strong>🔎 Scouting </strong> : Établissement d'une liste de joueurs collant aux critères choisis</li>
             </ul>
@@ -476,7 +476,7 @@ else:
             <ul>
                 <li><strong>📊 Player Analysis</strong>: Analyze the player of your choice through various statistics</li>
                 <li><strong>🥊 Player Comparison</strong>: Compare two players who play in the same position</li>
-                <li><strong>🏆 Player Ranking (Aggregate Statistics) </strong>: Rank players based on a chosen aggregate statistic</li>
+                <li><strong>🏆 Player Ranking (Aggregate Statistics by Category) </strong>: Rank players based on a chosen aggregate statistic by category</li>
                 <li><strong>🥇 Player Ranking (Raw Statistics) </strong>: Rank players based on a chosen raw statistic</li>
                 <li><strong>🔎 Scouting </strong> : Drawing up a list of players matching the chosen criteria</li>
             </ul>
