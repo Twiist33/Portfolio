@@ -200,15 +200,15 @@ if langue == "Français":
         # Ajout des images sous la section
         col1, col2 = st.columns(2)
         with col1:
-            st.image("image/player_perf_fr.png", caption="Analyse d'un joueur", use_column_width=True)
+            st.image("image/player_perf_fr.png", caption="Analyse d'un joueur", use_container_width=True)
         with col2:
-            st.image("image/similarity_player_fr.png", caption="Analyse de joueurs similaires", use_column_width=True)
+            st.image("image/similarity_player_fr.png", caption="Analyse de joueurs similaires", use_container_width=True)
 
         col3, col4 = st.columns(2)
         with col3:
-            st.image("image/comparative_radar_fr.png", caption="Analyse de deux joueurs", use_column_width=True)
+            st.image("image/comparative_radar_fr.png", caption="Analyse de deux joueurs", use_container_width=True)
         with col4:
-            st.image("image/ranking_ast_fr.png", caption="Analyse d'une statistique", use_column_width=True)
+            st.image("image/ranking_ast_fr.png", caption="Analyse d'une statistique", use_container_width=True)
 
 
         st.write("""
@@ -240,16 +240,16 @@ if langue == "Français":
         # Ajout des images sous la section
         col1, col2 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col1:
-            st.image("image/photo_competition_fr.jpg", caption="Analyse d'une compétition", use_column_width=True)
+            st.image("image/photo_competition_fr.jpg", caption="Analyse d'une compétition", use_container_width=True)
         with col2:
-            st.image("image/photo_equipe_fr.jpg", caption="Analyse d'une équipe", use_column_width=True)
+            st.image("image/photo_equipe_fr.jpg", caption="Analyse d'une équipe", use_container_width=True)
 
         # Ajout des images sous la section
         col3, col4 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col3:
-            st.image("image/photo_saison_fr.jpg", caption="Analyse d'une saison", use_column_width=True)
+            st.image("image/photo_saison_fr.jpg", caption="Analyse d'une saison", use_container_width=True)
         with col4:
-            st.image("image/photo_confrontation_equipe_fr.jpg", caption="Analyse d'une opposition", use_column_width=True)
+            st.image("image/photo_confrontation_equipe_fr.jpg", caption="Analyse d'une opposition", use_container_width=True)
 
 
 
@@ -269,21 +269,21 @@ if langue == "Français":
         # Ajout des images sous la section
         col5, col6 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col5:
-            st.image("image/big5_stats_24_25.png", caption="Dashboard des statistiques sur les 5 grands championnats sur la saison 24/25 (Offensif)", use_column_width=True)
+            st.image("image/big5_stats_24_25.png", caption="Dashboard des statistiques sur les 5 grands championnats sur la saison 24/25 (Offensif)", use_container_width=True)
         with col6:
-            st.image("image/diff_goals_xg_24_25.png", caption="Graphique des joueurs superformant le plus leur Xg sur la saison 24/25", use_column_width=True)
+            st.image("image/diff_goals_xg_24_25.png", caption="Graphique des joueurs superformant le plus leur Xg sur la saison 24/25", use_container_width=True)
         
         col7, col8 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col7:
-            st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_column_width=True)
+            st.image("image/Argentina_France_Dashboard.png", caption="Dashboard du match France-Argentine", use_container_width=True)
         with col8:
-            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_column_width=True)
+            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Performance de Kylian Mbappe sur la saison 24/25", use_container_width=True)
 
         col9, col10 = st.columns(2)  # Création de deux colonnes pour aligner les images
         with col9:
-            st.image("image/Rennes_team_dashboard.jpg", caption="Dashboard du comportement de Rennes selon le score sur la saison 15/16", use_column_width=True)
+            st.image("image/Rennes_team_dashboard.jpg", caption="Dashboard du comportement de Rennes selon le score sur la saison 15/16", use_container_width=True)
         with col10:
-            st.image("image/Rennes_opponents_dashboard.jpg", caption="Dashboard du comportement des adversaires de Rennes selon le score sur la saison 15/16", use_column_width=True)
+            st.image("image/Rennes_opponents_dashboard.jpg", caption="Dashboard du comportement des adversaires de Rennes selon le score sur la saison 15/16", use_container_width=True)
 
     # Section Articles
     with st.expander("📰 Articles"):
@@ -521,15 +521,15 @@ else:
         # Add images below the section
         col1, col2 = st.columns(2)
         with col1:
-            st.image("image/player_perf_eng.png", caption="Player performance analysis", use_column_width=True)
+            st.image("image/player_perf_eng.png", caption="Player performance analysis", use_container_width=True)
         with col2:
-            st.image("image/similarity_player_eng.png", caption="Player performance similarity", use_column_width=True)
+            st.image("image/similarity_player_eng.png", caption="Player performance similarity", use_container_width=True)
 
         col3, col4 = st.columns(2)
         with col3:
-            st.image("image/comparative_radar_eng.png", caption="Radar comparison", use_column_width=True)
+            st.image("image/comparative_radar_eng.png", caption="Radar comparison", use_container_width=True)
         with col4:
-            st.image("image/ranking_ast_eng.png", caption="Statistical ranking analysis", use_column_width=True)
+            st.image("image/ranking_ast_eng.png", caption="Statistical ranking analysis", use_container_width=True)
 
         st.write("""
             - **Data Visualization Project on French Football Championships**
@@ -559,15 +559,15 @@ else:
         # Adding images below the section
         col1, col2 = st.columns(2)  # Creating two columns to align images
         with col1:
-            st.image("image/photo_competition_eng.jpg", caption="Competition Analysis", use_column_width=True)
+            st.image("image/photo_competition_eng.jpg", caption="Competition Analysis", use_container_width=True)
         with col2:
-            st.image("image/photo_equipe_eng.jpg", caption="Team Analysis", use_column_width=True)
+            st.image("image/photo_equipe_eng.jpg", caption="Team Analysis", use_container_width=True)
 
         col3, col4 = st.columns(2)  # Creating two columns to align images
         with col3:
-            st.image("image/photo_saison_eng.jpg", caption="Season Analysis", use_column_width=True)
+            st.image("image/photo_saison_eng.jpg", caption="Season Analysis", use_container_width=True)
         with col4:
-            st.image("image/photo_confrontation_equipe_eng.jpg", caption="Head-to-Head Analysis", use_column_width=True)
+            st.image("image/photo_confrontation_equipe_eng.jpg", caption="Head-to-Head Analysis", use_container_width=True)
 
 
         st.write("""
@@ -587,21 +587,21 @@ else:
         # Adding images below the section
         col5, col6 = st.columns(2)  # Creating two columns to align images
         with col5:
-            st.image("image/big5_stats_24_25.png", caption="Dashboard of statistics on the 5 major leagues for the 24/25 season (Offensive)", use_column_width=True)
+            st.image("image/big5_stats_24_25.png", caption="Dashboard of statistics on the 5 major leagues for the 24/25 season (Offensive)", use_container_width=True)
         with col6:
-            st.image("image/diff_goals_xg_24_25.png", caption="Graph of the players who superformed their Xg the most over the 24/25 season", use_column_width=True)
+            st.image("image/diff_goals_xg_24_25.png", caption="Graph of the players who superformed their Xg the most over the 24/25 season", use_container_width=True)
             
         col7, col8 = st.columns(2)  # Creating two columns to align images
         with col7:
-            st.image("image/Argentina_France_Dashboard.png", caption="France-Argentina Match Dashboard", use_column_width=True)
+            st.image("image/Argentina_France_Dashboard.png", caption="France-Argentina Match Dashboard", use_container_width=True)
         with col8:
-            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_column_width=True)
+            st.image("image/Pizza_plot_Kylian_Mbappe.png", caption="Kylian Mbappe's Performance in the 24/25 Season", use_container_width=True)
 
         col9, col10 = st.columns(2)  #Creating two columns to align images
         with col9:
-            st.image("image/Rennes_team_dashboard.jpg", caption="Dashboard of Rennes' behaviour by score over the 15/16 season", use_column_width=True)
+            st.image("image/Rennes_team_dashboard.jpg", caption="Dashboard of Rennes' behaviour by score over the 15/16 season", use_container_width=True)
         with col10:
-            st.image("image/Rennes_opponents_dashboard.jpg", caption="Dashboard of Rennes‘ opponents’ behaviour by score over the 15/16 season", use_column_width=True)
+            st.image("image/Rennes_opponents_dashboard.jpg", caption="Dashboard of Rennes‘ opponents’ behaviour by score over the 15/16 season", use_container_width=True)
 
     # Section Articles
     with st.expander("📰 Articles"):
