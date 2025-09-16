@@ -514,7 +514,6 @@ else:
             <ul>
                 <li><a href="https://player-performance-big-5-24-25-romain-traboul.streamlit.app/" target="_blank">The link of the application</a></li>
                 <li><a href="https://github.com/Twiist33/Player_Performance" target="_blank">The code associated with the application</a></li>
-                <li><em>My resume</em></li>
             </ul>
             """, unsafe_allow_html=True
         )
