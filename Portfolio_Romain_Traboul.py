@@ -5,13 +5,16 @@ Ceci est le code menant au portfolio de Romain Traboul.
 """
 # Import des librairies
 import streamlit as st
+import base64, mimetypes
+
 
 # Charger les fichiers PDF
 with open("Mémoire/Mémoire_Romain_Traboul.pdf", "rb") as file:
     memoire = file.read()
 
 # Affichage du titre et du logo de l'application web
-st.set_page_config(page_title="Portfolio Romain Traboul", page_icon="🧑‍💻", layout="centered")
+st.set_page_config(page_title="Portfolio Romain Traboul", page_icon="🧑‍💻", layout="wide")
+
 
 # Titre de la page
 st.markdown(
@@ -19,142 +22,138 @@ st.markdown(
     unsafe_allow_html=True)
 
 # Utilisation de st.columns pour centrer l'image
-col1, col2, col3 = st.columns([1, 1, 1])  # Création de trois colonnes
+col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])  # Création de trois colonnes
 
 # Placer l'image dans la colonne du milieu
-with col2:
+with col3:
     st.image("image/Photo_Romain_Traboul.jpg", width=500)
 
-with col3:
+with col6:
     # Sélecteur de langue
     langue = st.radio("🌍 Choisissez votre langue / Choose your language :", ["Français", "English"])
+
+# ---- CSS pour des lignes "icône + texte" responsives ----
+st.markdown("""
+<style>
+.logo-row{
+  display:flex; align-items:center; gap:10px; margin:6px 0;
+}
+.logo-row img{
+  width:50px; height:50px; object-fit:contain; flex:0 0 50px;
+}
+.logo-row .text{ flex:1; }
+@media (max-width: 480px){
+  .logo-row{ gap:8px; }
+  .logo-row img{ width:50px; height:50px; flex-basis:50px; }
+}
+</style>
+""", unsafe_allow_html=True)
+
+# ---------- Utilitaires ----------
+@st.cache_data
+def to_data_uri(path: str) -> str:
+    mime = mimetypes.guess_type(path)[0] or "image/png"
+    with open(path, "rb") as f:
+        b64 = base64.b64encode(f.read()).decode("utf-8")
+    return f"data:{mime};base64,{b64}"
+
+def logo_row(icon_path: str, html_text: str, size: int | None = None, align: str = "center"):
+    """
+    - icon_path: chemin local de l'icône
+    - html_text: contenu HTML (titres, <ul>, liens...)
+    - size: taille px de l'icône (override ponctuel)
+    - align: "center" (par défaut) ou "start" pour aligner en haut
+    """
+    src = to_data_uri(icon_path)
+    size_style = f"width:{size}px;height:{size}px;flex:0 0 {size}px;object-fit:contain;" if size else ""
+    align_style = "align-items:flex-start;" if align == "start" else "align-items:center;"
+    st.markdown(
+        f"""
+        <div class="logo-row" style="{align_style}">
+            <img src="{src}" alt="" style="{size_style}">
+            <div class="text">{html_text}</div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
 
 # Contenu basé sur la langue sélectionnée
 if langue == "Français":
     # Section Contact
     with st.expander("📧 Profil"):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            st.image("image/age_icon.png", width=30)  # Icône pour l'âge
-        with col2:
-            st.write("**Âge** : 25 ans (18/09/2000)")
-
-        col3, col4 = st.columns([1, 4])
-        with col3:
-            st.image("image/email_icon.png", width=30)  # Icône pour l'email
-        with col4:
-            st.write("**Adresse mail** : romain.traboul971@gmail.com")
-
-        col5, col6 = st.columns([1, 4])
-        with col5:
-            st.image("image/linkedin_icon.png", width=30)  # Icône pour LinkedIn
-        with col6:
-            st.write("[**LinkedIn**](https://www.linkedin.com/in/romain-traboul-3bb8b4259)")
-
-        col7, col8 = st.columns([1, 4])
-        with col7:
-            st.image("image/github_icon.png", width=30)  # Icône pour GitHub
-        with col8:
-            st.write("[**GitHub**](https://github.com/Twiist33)")
-
-        col9, col10 = st.columns([1, 4])
-        with col9:
-            st.image("image/medium_icon.png", width=30)  # Icône pour Medium
-        with col10:
-            st.write("[**Medium**](https://medium.com/@romain.traboul971)")
-
-        col11, col12 = st.columns([1, 4])
-        with col11:
-            st.image("image/tableau_icon.png", width=30)  # Icône pour Tableau
-        with col12:
-            st.write("[**Tableau**](https://public.tableau.com/app/profile/romain.traboul/vizzes)")
+        logo_row("image/age_icon.png", "<strong>Âge</strong> : 25 ans (18/09/2000)", size=40)
+        logo_row("image/email_icon.png", "<strong>Adresse mail</strong> : romain.traboul971@gmail.com", size=40)
+        logo_row("image/linkedin_icon.png", '<a href="https://www.linkedin.com/in/romain-traboul-3bb8b4259" target="_blank"><strong>LinkedIn</strong></a>', size=40)
+        logo_row("image/github_icon.png", '<a href="https://github.com/Twiist33" target="_blank"><strong>GitHub</strong></a>', size=40)
+        logo_row("image/medium_icon.png", '<a href="https://medium.com/@romain.traboul971" target="_blank"><strong>Medium</strong></a>', size=40)
+        logo_row("image/tableau_icon.png", '<a href="https://public.tableau.com/app/profile/romain.traboul/vizzes" target="_blank"><strong>Tableau</strong></a>', size=40)
 
     # Section Aptitudes
     with st.expander("💡 Aptitudes"):
-        col1, col2 = st.columns([0.1, 0.9])  # Ajustement de la largeur des colonnes
-
-        with col1:
-            st.image("image/programmation-logo.png", width=30)
-        with col2:
-            st.write("**Langages de programmation / Outils de visualisation :** Python, R, Excel, Tableau, Canva")
-
-        with col1:
-            st.image("image/library-logo.png", width=30)
-        with col2:
-            st.write("**Bibliothèques :** Pandas, NumPy, Matplotlib, Streamlit, Beautifulsoup4, Selenium...")
-
-        with col1:
-            st.image("image/sql-logo.png", width=30)
-        with col2:
-            st.write("**Outils :** PostgreSQL, Git")
-
-        with col1:
-            st.image("image/ball-logo.png", width=30)
-        with col2:
-            st.write("**Plateformes spécifiques à l'analyse sportive :** SkillCorner, Statsbomb, LongoMatch")
-
-        with col1:
-            st.image("image/langue-logo.png", width=30)
-        with col2:
-            st.write("**Langues :** Français (Natif), Anglais (C1)")
+        logo_row("image/programmation-logo.png","<strong>Langages de programmation / Outils de visualisation :</strong> Python, R, Excel, Tableau, Canva",size=40)
+        logo_row("image/library-logo.png","<strong>Bibliothèques :</strong> Pandas, NumPy, Matplotlib, Streamlit, Beautifulsoup4, Selenium...",size=40)
+        logo_row("image/sql-logo.png","<strong>Outils :</strong> PostgreSQL, Git",size=40)
+        logo_row("image/ball-logo.png","<strong>Plateformes spécifiques à l'analyse sportive :</strong> SkillCorner, Statsbomb, LongoMatch",size=40)
+        logo_row("image/langue-logo.png","<strong>Langues :</strong> Français (Natif), Anglais (C1)",size=40)
 
     # Section Expérience
     with st.expander("💼 Expérience"):
-        col1, col2 = st.columns([1, 4])  # Une colonne large pour le texte, une plus petite pour l'image
-        with col1:
-            st.image("image/logo_clermont_foot63.jpg", width=60)  # Image à côté du texte
-        with col2:
-            st.write("""
-            **Stagiaire Data Scientist** au Clermont Foot 63 (Février 2024 - Juillet 2024)  
+        logo_row(
+            "image/logo_clermont_foot63.jpg",
+            """
+            <strong>Stagiaire Data Scientist</strong> au Clermont Foot 63 (Février 2024 - Juillet 2024)
             <div style="text-align: justify;">
             <ul>
-            <li>Développement d’un modèle de deep learning pour évaluer la qualité des actions de jeu en fonction de leur probabilité de mener à un but, afin d’apporter une évaluation objective dans les rapports d’analyse de match</li>
-            <li>Conception d’un modèle de deep learning de classification des phases de jeu, destiné à être intégré dans le système d’analyse du club et à contribuer à la préparation tactique pré et post-match</li>
+                <li>Développement d’un modèle de deep learning pour évaluer la qualité des actions de jeu en fonction de leur probabilité de mener à un but, afin d’apporter une évaluation objective dans les rapports d’analyse de match</li>
+                <li>Conception d’un modèle de deep learning de classification des phases de jeu, destiné à être intégré dans le système d’analyse du club et à contribuer à la préparation tactique pré et post-match</li>
             </ul>
             </div>
-            """, unsafe_allow_html=True)
+            """,
+            size=60,           
+            align="start"
+        )
 
-        col3, col4 = st.columns([1, 4])  
-        with col3:
-            st.image("image/logo_merignac_football.jpg", width=60)
-        with col4:
-            st.write("""
-            **Stagiaire Data Analyst** au S.A Mérignac Football (Avril 2023 - Mai 2023)
+        logo_row(
+            "image/logo_merignac_football.jpg",
+            """
+            <strong>Stagiaire Data Analyst</strong> au S.A Mérignac Football (Avril 2023 - Mai 2023)
             <div style="text-align: justify;">
             <ul>
-            <li>Extraction et traitement de données statistiques issues de vidéos de match, en vue de constituer des jeux de données structurés exploitables pour l’analyse de performance</li>
-            <li>Production de rapports statistiques destinés au staff technique, facilitant le suivi et la compréhension des performances de l’équipe pendant la période de compétition</li>
+                <li>Extraction et traitement de données statistiques issues de vidéos de match, en vue de constituer des jeux de données structurés exploitables pour l’analyse de performance</li>
+                <li>Production de rapports statistiques destinés au staff technique, facilitant le suivi et la compréhension des performances de l’équipe pendant la période de compétition</li>
             </ul>
-            </div> 
-            """, unsafe_allow_html=True)
+            </div>
+            """,
+            size=60,
+            align="start"
+        )
 
     # Section Formation
     with st.expander("🎓 Formation"):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            st.image("image/digisport-logo.png", width=80)  # Icône ou logo de l'Université de Rennes 2
-        with col2:
-            st.write("""
-            **Master Science du Numérique et Sport** à l'Université de Rennes 2 (2022 - 2024)  
-            - Majeure Sciences des données appliquées au sport.
-            """)
-
-        col3, col4 = st.columns([1, 4])
-        with col3:
-            st.image("image/mss_logo.png", width=80)  # Icône ou logo de l'Université de Bordeaux
-        with col4:
-            st.write("""
-            **Master 1 Modélisation statistique et stochastique** à l'Université de Bordeaux (2021 - 2022)
-            """)
-
-        col5, col6 = st.columns([1, 4])
-        with col5:
-            st.image("image/miashs_logo.png", width=80)  # Réutilisation du logo pour la Licence
-        with col6:
-            st.write("""
-            **Licence MIASHS** à l'Université de Bordeaux (2018 - 2021)  
-            - Parcours Sciences Cognitives
-            """)
+        logo_row(
+            "image/digisport-logo.png",
+            """
+            <strong>Master Science du Numérique et Sport</strong> — Université de Rennes 2 (2022–2024)<br>
+            <em>Majeure : Sciences des données appliquées au sport</em>
+            """,
+            size=80, align="start"
+        )
+        logo_row(
+            "image/mss_logo.png",
+            """
+            <strong>Master 1 Modélisation statistique et stochastique</strong> — Université de Bordeaux (2021–2022)
+            """,
+            size=80, align="start"
+        )
+        logo_row(
+            "image/miashs_logo.png",
+            """
+            <strong>Licence MIASHS</strong> — Université de Bordeaux (2018–2021)<br>
+            <em>Parcours : Sciences Cognitives</em>
+            """,
+            size=80, align="start"
+        )
 
     # Section Projet
     with st.expander("🔨 Projets"):
@@ -302,7 +301,6 @@ if langue == "Français":
             unsafe_allow_html=True
         )
 
-
     # Section Mémoire
     with st.expander("📝 Mémoires"):
         st.write("""
@@ -356,128 +354,76 @@ if langue == "Français":
 else:
     # Contact Section
     with st.expander("📧 Profile"):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            st.image("image/age_icon.png", width=30)  # Icon for age
-        with col2:
-            st.write("**Age**: 25 years old (18/09/2000)")
-
-        col3, col4 = st.columns([1, 4])
-        with col3:
-            st.image("image/email_icon.png", width=30)  # Icon for email
-        with col4:
-            st.write("**Email**: romain.traboul971@gmail.com")
-
-        col5, col6 = st.columns([1, 4])
-        with col5:
-            st.image("image/linkedin_icon.png", width=30)  # Icon for LinkedIn
-        with col6:
-            st.write("[**LinkedIn**](https://www.linkedin.com/in/romain-traboul-3bb8b4259)")
-
-        col7, col8 = st.columns([1, 4])
-        with col7:
-            st.image("image/github_icon.png", width=30)  # Icon for GitHub
-        with col8:
-            st.write("[**GitHub**](https://github.com/Twiist33)")
-
-        col9, col10 = st.columns([1, 4])
-        with col9:
-            st.image("image/medium_icon.png", width=30)  # Icône for Medium
-        with col10:
-            st.write("[**Medium**](https://medium.com/@romain.traboul971)")
-
-        col11, col12 = st.columns([1, 4])
-        with col11:
-            st.image("image/tableau_icon.png", width=30)  # Icône for Tableau
-        with col12:
-            st.write("[**Tableau**](https://public.tableau.com/app/profile/romain.traboul/vizzes)")
+        logo_row("image/age_icon.png", "<strong>Age</strong>: 25 years old (18/09/2000)", size=40)
+        logo_row("image/email_icon.png", "<strong>Email</strong>: romain.traboul971@gmail.com", size=40)
+        logo_row("image/linkedin_icon.png", '<a href="https://www.linkedin.com/in/romain-traboul-3bb8b4259" target="_blank"><strong>LinkedIn</strong></a>', size=40)
+        logo_row("image/github_icon.png", '<a href="https://github.com/Twiist33" target="_blank"><strong>GitHub</strong></a>', size=40)
+        logo_row("image/medium_icon.png", '<a href="https://medium.com/@romain.traboul971" target="_blank"><strong>Medium</strong></a>', size=40)
+        logo_row("image/tableau_icon.png", '<a href="https://public.tableau.com/app/profile/romain.traboul/vizzes" target="_blank"><strong>Tableau</strong></a>', size=40)
 
     # Skills Section
     with st.expander("💡 Skills"):
-        col1, col2 = st.columns([0.1, 0.9])  # Adjusting column width
-
-        with col1:
-            st.image("image/programmation-logo.png", width=30)
-        with col2:
-            st.write("**Programming Languages / Visualization tools :** Python, R, Excel, Tableau, Canva")
-
-        with col1:
-            st.image("image/library-logo.png", width=30)
-        with col2:
-            st.write("**Libraries:** Pandas, NumPy, Matplotlib, Streamlit, BeautifulSoup4, Selenium...")
-
-        with col1:
-            st.image("image/sql-logo.png", width=30)
-        with col2:
-            st.write("**Tools:** PostgreSQL, Git")
-
-        with col1:
-            st.image("image/ball-logo.png", width=30)
-        with col2:
-            st.write("**Sports Analysis Platforms:** SkillCorner, StatsBomb, LongoMatch")
-
-        with col1:
-            st.image("image/langue-logo.png", width=30)
-        with col2:
-            st.write("**Languages:** French (Native), English (C1)")
+        logo_row("image/programmation-logo.png","<strong>Programming Languages / Visualization tools:</strong> Python, R, Excel, Tableau, Canva",size=40)
+        logo_row("image/library-logo.png","<strong>Libraries:</strong> Pandas, NumPy, Matplotlib, Streamlit, BeautifulSoup4, Selenium...",size=40)
+        logo_row("image/sql-logo.png","<strong>Tools:</strong> PostgreSQL, Git",size=40)
+        logo_row("image/ball-logo.png","<strong>Sports Analysis Platforms:</strong> SkillCorner, StatsBomb, LongoMatch",size=40)
+        logo_row("image/langue-logo.png","<strong>Languages:</strong> French (Native), English (C1)",size=40)
 
     # Experience Section
     with st.expander("💼 Experience"):
-        col1, col2 = st.columns([1, 4])  # A smaller column for the image, a larger one for the text
-        with col1:
-            st.image("image/logo_clermont_foot63.jpg", width=60)  # Image next to the text
-        with col2:
-            st.write("""
-            **Data Scientist Intern** at Clermont Foot 63 (February 2024 - July 2024)
+        logo_row(
+            "image/logo_clermont_foot63.jpg",
+            """
+            <strong>Data Scientist Intern</strong> at Clermont Foot 63 (February 2024 – July 2024)
             <div style="text-align: justify;">
-            <ul>
-            <li>Developed a deep learning model to evaluate the quality of on-ball actions based on their probability of leading to a goal, enhancing the objectivity of match analysis reports shared with the coaching staff</li>
-            <li>Built a deep learning model for classifying phases of play, designed to be integrated into the club’s analysis workflow and supporting pre- and post-match reporting</li>
-            </ul>
-            </div> 
-            """, unsafe_allow_html=True)
+              <ul>
+                <li>Developed a deep learning model to evaluate the quality of on-ball actions based on their probability of leading to a goal, enhancing the objectivity of match analysis reports shared with the coaching staff</li>
+                <li>Built a deep learning model for classifying phases of play, designed to be integrated into the club’s analysis workflow and supporting pre- and post-match reporting</li>
+              </ul>
+            </div>
+            """,
+            size=60, align="start"
+        )
 
-        col3, col4 = st.columns([1, 4])  
-        with col3:
-            st.image("image/logo_merignac_football.jpg", width=60)
-        with col4:
-            st.write("""
-            **Data Analyst Intern** at S.A Mérignac Football (April 2023 - May 2023)
+        logo_row(
+            "image/logo_merignac_football.jpg",
+            """
+            <strong>Data Analyst Intern</strong> at S.A Mérignac Football (April 2023 – May 2023)
             <div style="text-align: justify;">
-            <ul>
-            <li>Extracted and processed statistical data from match videos, transforming raw information into structured datasets for analysis</li>
-            <li>Produced statistical reports that provided the coaching staff with quantified insights on team performance during the competition period</li>
-            </ul>
-            </div> 
-            """, unsafe_allow_html=True)
+              <ul>
+                <li>Extracted and processed statistical data from match videos, transforming raw information into structured datasets for analysis</li>
+                <li>Produced statistical reports that provided the coaching staff with quantified insights on team performance during the competition period</li>
+              </ul>
+            </div>
+            """,
+            size=60, align="start"
+        )
 
-    # Education Section
+    # ---------- Education Section ----------
     with st.expander("🎓 Education"):
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            st.image("image/digisport-logo.png", width=80)  # Icon or logo of Université de Rennes 2
-        with col2:
-            st.write("""
-            **Master's Degree in Digital Science and Sports** at Université de Rennes 2 (2022 - 2024)  
-            - Major in Sports Data Science.
-            """)
-
-        col3, col4 = st.columns([1, 4])
-        with col3:
-            st.image("image/mss_logo.png", width=80)  # Icon or logo of Université de Bordeaux
-        with col4:
-            st.write("""
-            **Master 1 in Statistical and Stochastic Modeling** at Université de Bordeaux (2021 - 2022)
-            """)
-
-        col5, col6 = st.columns([1, 4])
-        with col5:
-            st.image("image/miashs_logo.png", width=80)  # Reuse the logo for the Bachelor's degree
-        with col6:
-            st.write("""
-            **Bachelor's Degree in MIASHS** at Université de Bordeaux (2018 - 2021)  
-            - Cognitive Science track
-            """)
+        logo_row(
+            "image/digisport-logo.png",
+            """
+            <strong>Master's Degree in Digital Science and Sports</strong> — Université de Rennes 2 (2022–2024)<br>
+            <em>Major: Sports Data Science</em>
+            """,
+            size=80, align="start"
+        )
+        logo_row(
+            "image/mss_logo.png",
+            """
+            <strong>Master 1 in Statistical and Stochastic Modeling</strong> — Université de Bordeaux (2021–2022)
+            """,
+            size=80, align="start"
+        )
+        logo_row(
+            "image/miashs_logo.png",
+            """
+            <strong>Bachelor's Degree in MIASHS</strong> — Université de Bordeaux (2018–2021)<br>
+            <em>Cognitive Science track</em>
+            """,
+            size=80, align="start"
+        )
 
     # Projects Section
     with st.expander("🔨 Projects"):
