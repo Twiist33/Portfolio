@@ -25,7 +25,7 @@ st.markdown(
 col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])  # Création de trois colonnes
 
 # Placer l'image dans la colonne du milieu
-with col3:
+with col4:
     st.image("image/Photo_Romain_Traboul.jpg", width=500)
 
 with col6:
