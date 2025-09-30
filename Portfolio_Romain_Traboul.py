@@ -22,13 +22,13 @@ st.markdown(
     unsafe_allow_html=True)
 
 # Utilisation de st.columns pour centrer l'image
-col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])  # Création de trois colonnes
+col1, col2, col3, col4, col5= st.columns([1, 1, 1, 1, 1])  # Création de trois colonnes
 
 # Placer l'image dans la colonne du milieu
-with col4:
+with col2:
     st.image("image/Photo_Romain_Traboul.jpg", width=500)
 
-with col6:
+with col5:
     # Sélecteur de langue
     langue = st.radio("🌍 Choisissez votre langue / Choose your language :", ["Français", "English"])
 
