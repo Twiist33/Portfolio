@@ -307,8 +307,8 @@ if langue == "Français":
             <strong>Pourquoi Liverpool a-t-il recruté Ekitike ? (01/10/2025)</strong>
         </a>
         <div style="text-align: justify;">
-        Auteur de 5 buts en 9 matchs avec l'équipe de Liverpool, le jeune attaquant français semble répondre aux attentes de Arne Slot. Mais quelles sont les raisons de ce recrutement ?
-        Voici une analyse de son profil à travers les statistiques avancées et quelques clés de compréhension expliquant ce bon début de saison chez les Reds.
+        Auteur de 5 buts en 9 matchs avec Liverpool, le jeune attaquant français réussit une intégration remarquée au sein de l’équipe d’Arne Slot. Mais au-delà de ses statistiques brutes, Ekitike se distingue aussi par d’autres qualités dans son jeu.
+        Quelles sont-elles ? Je vous propose une analyse de son profil à travers les statistiques avancées et quelques clés pour comprendre ce début de saison réussi chez les Reds.
         </div>
         """,
             unsafe_allow_html=True
@@ -584,8 +584,8 @@ else:
             <strong>Why did Liverpool sign Ekitike? (10/01/2025)</strong>
         </a>
         <div style="text-align: justify;">
-        Scorer of 5 goals in 9 games with Liverpool, the young French striker seems to be meeting Arne Slot's expectations. But what are the reasons behind this signing?  
-        Here is an analysis of his profile through advanced statistics and some key insights explaining this strong start to the season with the Reds.
+        Scorer of 5 goals in 9 games with Liverpool, the young French striker has enjoyed a notable integration into Arne Slot’s team. But beyond his raw statistics, Ekitike also stands out for other qualities in his game. 
+        What are they? Here’s an analysis of his profile through advanced statistics and some key insights to better understand this successful start to the season with the Reds.
         </div>
         """,
             unsafe_allow_html=True
