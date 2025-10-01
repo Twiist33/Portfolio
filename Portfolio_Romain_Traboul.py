@@ -301,6 +301,19 @@ if langue == "Français":
             unsafe_allow_html=True
         )
 
+        st.markdown(
+            """
+        - <a href="https://medium.com/@romain.traboul971/pourquoi-liverpool-a-t-il-recrut%C3%A9-ekitike-30ed152c7415" target="_blank">
+            <strong>Pourquoi Liverpool a-t-il recruté Ekitike ? (01/10/2025)</strong>
+        </a>
+        <div style="text-align: justify;">
+        Auteur de 5 buts en 9 matchs avec l'équipe de Liverpool, le jeune attaquant français semble répondre aux attentes de Arne Slot. Mais quelles sont les raisons de ce recrutement ?
+        Voici une analyse de son profil à travers les statistiques avancées et quelques clés de compréhension expliquant ce bon début de saison chez les Reds.
+        </div>
+        """,
+            unsafe_allow_html=True
+        )
+        
     # Section Mémoire
     with st.expander("📝 Mémoires"):
         st.write("""
@@ -553,18 +566,30 @@ else:
 
         st.markdown(
             """
-    - <a href="https://medium.com/@romain.traboul971/le-1er-but-d%C3%A9termine-t-il-vraiment-lissue-d-un-match-74e908aeb887" target="_blank">
-        <strong>Does the First Goal Really Decide the Outcome of a Match? (09/16/2025)</strong>
-    </a>
-    <div style="text-align: justify;">
-    In major sporting events such as the Champions League finals or the World Cup, it is often observed that the team scoring first tends to win.  
-    But to what extent does this crucial first goal truly influence the outcome of a match? And what are the determining factors behind it?  
-    This is what I aim to explore through a statistical analysis and a review of the scientific literature.
-    </div>
-    """,
+        - <a href="https://medium.com/@romain.traboul971/le-1er-but-d%C3%A9termine-t-il-vraiment-lissue-d-un-match-74e908aeb887" target="_blank">
+            <strong>Does the First Goal Really Decide the Outcome of a Match? (09/16/2025)</strong>
+        </a>
+        <div style="text-align: justify;">
+        In major sporting events such as the Champions League finals or the World Cup, it is often observed that the team scoring first tends to win.  
+        But to what extent does this crucial first goal truly influence the outcome of a match? And what are the determining factors behind it?  
+        This is what I aim to explore through a statistical analysis and a review of the scientific literature.
+        </div>
+        """,
             unsafe_allow_html=True
         )
 
+        st.markdown(
+            """
+        - <a href="https://medium.com/@romain.traboul971/pourquoi-liverpool-a-t-il-recrut%C3%A9-ekitike-30ed152c7415" target="_blank">
+            <strong>Why did Liverpool sign Ekitike? (10/01/2025)</strong>
+        </a>
+        <div style="text-align: justify;">
+        Scorer of 5 goals in 9 games with Liverpool, the young French striker seems to be meeting Arne Slot's expectations. But what are the reasons behind this signing?  
+        Here is an analysis of his profile through advanced statistics and some key insights explaining this strong start to the season with the Reds.
+        </div>
+        """,
+            unsafe_allow_html=True
+        )
     # Section Mémoire
     with st.expander("📝 Dissertations"):
         st.write("""
