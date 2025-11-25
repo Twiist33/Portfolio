@@ -678,7 +678,6 @@ else:
         </a>
         <div style="text-align: justify;">
         In the pursuit of optimizing performance analysis in football, new advanced indicators are emerging. Among them, the metric used to evaluate on-ball actions stands out due to its depth and the range of insights it can generate. But how relevant can it truly be?
-
         This is what I explore in this article, along with a practical case study carried out as part of the PySport x SkillCorner Analytics Cup challenge. I also present a visualization of player, team, and match performances based on data derived from their action evaluation models.
         </div>
         """,
