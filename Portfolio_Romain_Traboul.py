@@ -250,7 +250,41 @@ if langue == "Français":
         with col4:
             st.image("image/photo_confrontation_equipe_fr.jpg", caption="Analyse d'une opposition", use_container_width=True)
 
+        st.write(
+            """
+            - **Projet autour des métriques d'évaluation des actions de jeu de SkillCorner**
+            <p style="text-align: justify;">
+            <br>
+            Dans le cadre du challenge PySport X SkillCorner Analytics Cup, nous disposons des données de tracking et de Game Intelligence Dynamic Events pour 10 matchs d'Australian A-League sur la saison 24/25.
+            L'objectif de ce projet sera de visualiser les performances des joueurs à travers l'utilisation des données de 2 modèles liés à l'évaluation des actions de jeu :
+            <ul>
+                <li><strong>xThreat</strong> : Probabilité qu'un but soit marqué dans les 10 secondes si un joueur donné était la cible d'une passe complète à un moment donné</li>
+                <li><strong>Expected Possession Value</strong> : Détermine les chances qu'une équipe marque dans les 90 secondes suivantes ou avant que le ballon ne sorte du terrain</li>
+            </ul>
 
+            <br>
+
+            <p style="text-align: justify;">
+            Pour cela, plusieurs fonctionnalités sont disponibles :
+
+            <ul>
+                <li><strong>📊 Analyse d'un Joueur</strong> : Analyse du joueur de votre choix à travers ces indicateurs statistiques</li>
+                <li><strong>🥇 Analyse d'une Équipe </strong> : Aggrégation des statistiques pour l'équipe choisie</li>
+                <li><strong>🔎 Analyse d'un match </strong> : Confrontation des statistiques liées à l'évaluation des actions de jeu entre les deux équipes</li>
+            </ul>
+
+            <br>
+
+            Pour plus de détails sur ce projet, vous avez à votre disposition :
+            <ul>
+                <li><a href="https://github.com/Twiist33/Expected_Threat/blob/main/src/documentation/Documentation_Expected_Threat_FR.pdf" target="_blank">La documentation du projet</a></li>
+                <li><a href="https://github.com/Twiist33/Expected_Threat" target="_blank">Le code associé à l'application</a></li>
+                <li><a href="https://github.com/SkillCorner/opendata" target="_blank">Le lien pour accèder aux données de PySport x SkillCorner</a></li>
+
+            </ul>
+            """,
+            unsafe_allow_html=True
+        )
 
         st.write("""
             - **Autre projets**
@@ -309,6 +343,19 @@ if langue == "Français":
         <div style="text-align: justify;">
         Auteur de 5 buts en 9 matchs avec Liverpool, le jeune attaquant français réussit une intégration remarquée au sein de l’équipe d’Arne Slot. Mais au-delà de ses statistiques brutes, Ekitike se distingue aussi par d’autres qualités dans son jeu.
         Quelles sont-elles ? Je vous propose une analyse de son profil à travers les statistiques avancées et quelques clés pour comprendre ce début de saison réussi chez les Reds.
+        </div>
+        """,
+            unsafe_allow_html=True
+        )
+
+        st.markdown(
+            """
+        - <a href="https://medium.com/@romain.traboul971/d%C3%A9cryptage-de-la-m%C3%A9trique-d%C3%A9valuation-des-actions-de-jeu-e2c32b292881" target="_blank">
+            <strong>Décryptage de la métrique d’évaluation des actions de jeu (25/11/2025)</strong>
+        </a>
+        <div style="text-align: justify;">
+        Dans une optique d’optimisation de l’analyse de la performance dans le football, de nouveaux indicateurs avancés émergent. Parmi eux, la métrique d’évaluation des actions de jeu se démarque particulièrement, tant par sa profondeur que par ses dérivées possibles. Mais en quoi peut-elle réellement se révéler pertinente ?
+        C’est ce que j’explore dans cet article, accompagné d’un cas pratique réalisé dans le cadre du challenge PySport x SkillCorner Analytics Cup. J’y propose une visualisation des performances des joueurs, équipes et matchs à partir des données issues de leurs modèles d’évaluation des actions.
         </div>
         """,
             unsafe_allow_html=True
@@ -527,6 +574,39 @@ else:
         with col4:
             st.image("image/photo_confrontation_equipe_eng.jpg", caption="Head-to-Head Analysis", use_container_width=True)
 
+        st.write(
+            """
+            - **Project on SkillCorner's game action evaluation metrics**
+            <p style="text-align: justify;">
+            <br>
+            As part of the PySport X SkillCorner Analytics Cup challenge, we have access to tracking and Game Intelligence Dynamic Events data from 10 matches of the Australian A-League during the 24/25 season.
+            The goal of this project is to visualize player performance through the use of two models related to action evaluation:
+            <ul>
+                <li><strong>xThreat</strong>: The probability that a goal will be scored within 10 seconds if a given player were the target of a completed pass at a certain moment.</li>
+                <li><strong>Expected Possession Value</strong>: Estimates the chances that a team will score within the next 90 seconds or before the ball goes out of play.</li>
+            </ul>
+
+            <br>
+            <p style="text-align: justify;">
+            To achieve this, several features are available:
+            
+            <ul>
+                <li><strong>📊 Player Analysis</strong>: Analyze the player of your choice through these statistical indicators.</li>
+                <li><strong>🥇 Team Analysis</strong>: Aggregate statistics for the selected team.</li>
+                <li><strong>🔎 Match Analysis</strong>: Compare action evaluation statistics between the two teams.</li>
+            </ul>
+
+            <br>
+
+            For more details about this project, you can access:
+            <ul>
+                <li><a href="https://github.com/Twiist33/Expected_Threat/blob/main/src/documentation/Documentation_Expected_Threat_ENG.pdf" target="_blank">The project documentation</a></li>
+                <li><a href="https://github.com/Twiist33/Expected_Threat" target="_blank">The application source code</a></li>
+                <li><a href="https://github.com/SkillCorner/opendata" target="_blank">The link to PySport x SkillCorner data</a></li>
+            </ul>
+            """,
+            unsafe_allow_html=True
+        )
 
         st.write("""
             - **Other Projects**
@@ -590,6 +670,22 @@ else:
         """,
             unsafe_allow_html=True
         )
+
+        st.markdown(
+            """
+        - <a href="https://medium.com/@romain.traboul971/d%C3%A9cryptage-de-la-m%C3%A9trique-d%C3%A9valuation-des-actions-de-jeu-e2c32b292881" target="_blank">
+            <strong>Decoding the metric used to evaluate on-ball actions (25/11/2025)</strong>
+        </a>
+        <div style="text-align: justify;">
+        In the pursuit of optimizing performance analysis in football, new advanced indicators are emerging. Among them, the metric used to evaluate on-ball actions stands out due to its depth and the range of insights it can generate. But how relevant can it truly be?
+
+        This is what I explore in this article, along with a practical case study carried out as part of the PySport x SkillCorner Analytics Cup challenge. I also present a visualization of player, team, and match performances based on data derived from their action evaluation models.
+        </div>
+        """,
+            unsafe_allow_html=True
+        )
+
+
     # Section Mémoire
     with st.expander("📝 Dissertations"):
         st.write("""
