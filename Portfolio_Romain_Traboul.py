@@ -15,11 +15,8 @@ with open("Mémoire/Mémoire_Romain_Traboul.pdf", "rb") as file:
 # Affichage du titre et du logo de l'application web
 st.set_page_config(page_title="Portfolio Romain Traboul", page_icon="🧑‍💻", layout="wide")
 
-
 # Titre de la page
-st.markdown(
-    "<h3 style='text-align: center;'>Portfolio de Romain Traboul</h3>", 
-    unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Portfolio de Romain Traboul</h3>", unsafe_allow_html=True)
 
 # Utilisation de st.columns pour centrer l'image
 col1, col2, col3, col4, col5= st.columns([1, 1, 1, 1, 1])  # Création de trois colonnes
@@ -32,7 +29,7 @@ with col5:
     # Sélecteur de langue
     langue = st.radio("🌍 Choisissez votre langue / Choose your language :", ["Français", "English"])
 
-# ---- CSS pour des lignes "icône + texte" responsives ----
+# CSS pour des lignes "icône + texte" responsives
 st.markdown("""
 <style>
 .logo-row{
@@ -49,7 +46,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ---------- Utilitaires ----------
+# Utilitaires
 @st.cache_data
 def to_data_uri(path: str) -> str:
     mime = mimetypes.guess_type(path)[0] or "image/png"
@@ -76,7 +73,6 @@ def logo_row(icon_path: str, html_text: str, size: int | None = None, align: str
         """,
         unsafe_allow_html=True
     )
-
 
 # Contenu basé sur la langue sélectionnée
 if langue == "Français":
@@ -157,6 +153,60 @@ if langue == "Français":
 
     # Section Projet
     with st.expander("🔨 Projets"):
+
+        st.write(
+            """
+            - **Projet de Data Visualisation d'analyse des performances des équipes et des joueurs des 5 grands championnat sur la saison 2025/26**
+            <p style="text-align: justify;">
+            L'objectif est de <strong>visualiser les performances des équipes et des joueurs sur la saison 25/26</strong>.
+            Les données des joueurs proviennent de Opta The Analyst, Fbref et Transfermarkt.
+            </p>
+
+            <p style="text-align: justify;">
+            Ainsi, l'analyse portera sur la saison 25/26 pour les compétitions suivantes :
+            <strong>Ligue 1, Bundesliga, Premier League, La Liga, Serie A</strong>.
+            </p>
+
+            <br>
+
+            <ul>
+                <li><strong>- Analyse des équipes</li>
+                <li><strong>📊 Analyse d'un équipes</strong> : Analyse de l'équipe de votre choix à travers plusieurs statistiques</li>
+                <li><strong>🥊 Comparaison entre Équipes</strong> : Analyse comparative entre deux équipes</li>
+                <li><strong>🏆 Classement des équipes (Stats Aggrégées par Catégorie) </strong> : Classement des équipes par performance selon une statistique aggrégée par catégorie choisie</li>
+                <li><strong>🥇 Classement des équipes (Stats Brutes) </strong> : Classement des équipes par performance selon une statistique brute choisie</li>
+                <li><strong>⭐ Top </strong> : Établissement d'une classement des équipes à partir des statistiques</li>
+            <br>
+                <li><strong>- Analyse des joueurs</li> 
+                <li><strong>📊 Analyse d'un Joueur</strong> : Analyse du joueur de votre choix à travers plusieurs statistiques</li>
+                <li><strong>🥊 Comparaison entre Joueurs</strong> : Analyse comparative entre deux joueurs du même poste</li>
+                <li><strong>🏆 Classement des joueurs (Stats Aggrégées par Catégorie) </strong> : Classement des joueurs par performance selon une statistique aggrégée par catégorie choisie</li>
+                <li><strong>🥇 Classement des joueurs (Stats Brutes) </strong> : Classement des joueurs par performance selon une statistique brute choisie</li>
+                <li><strong>🔎 Scouting </strong> : Établissement d'une liste de joueurs collant aux critères choisis</li>
+            </ul>
+            <br>
+
+            Pour plus de détails sur ce projet, vous avez à votre disposition :
+            <ul>
+                <li><a href="https://github.com/football-labs/Fotball-labs/blob/main/documentation/Documentation_FR.pdf" target="_blank">La documentation du projet</a></li>
+                <li><a href="https://github.com/football-labs/Fotball-labs" target="_blank">Le code associé à l'application</a></li>
+            </ul>
+            """,unsafe_allow_html=True
+        )
+        
+        # Ajout des images sous la section
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image("image/team_analysis_fr.png", caption="Analyse d'un équipe", use_container_width=True)
+        with col2:
+            st.image("image/power_ranking_fr.png", caption="Power Ranking", use_container_width=True)
+
+        col3, col4 = st.columns(2)
+        with col3:
+            st.image("image/stats_players_fr.png", caption="Analyse de joueurs", use_container_width=True)
+        with col4:
+            st.image("image/player_analysis_fr.png", caption="Analyse d'un joueur", use_container_width=True)
+
 
         st.write(
             """
@@ -490,7 +540,60 @@ else:
 
         st.write(
             """
-            - **Data visualisation project analysing player performance in the five major leagues**
+            - **Data Visualization Project focused on the analysis of team and player performances in the Big 5 leagues during the 2025/26 season**
+            <p style="text-align: justify;">
+            The objective is to <strong>visualize the performances of teams and players during the 2025/26 season</strong>.
+            Player data comes from Opta The Analyst, Fbref, and Transfermarkt.
+            </p>
+
+            <p style="text-align: justify;">
+            The analysis therefore focuses on the 2025/26 season for the following competitions:
+            <strong>Ligue 1, Bundesliga, Premier League, La Liga, Serie A</strong>.
+            </p>
+
+            <br>
+
+            <ul>
+                <li><strong>- Team Analysis</strong></li>
+                <li><strong>📊 Team Analysis</strong> : Analysis of the team of your choice through multiple statistics</li>
+                <li><strong>🥊 Team Comparison</strong> : Comparative analysis between two teams</li>
+                <li><strong>🏆 Team Rankings (Aggregated Stats by Category)</strong> : Ranking teams based on performance using an aggregated statistic by selected category</li>
+                <li><strong>🥇 Team Rankings (Raw Stats)</strong> : Ranking teams based on performance using a selected raw statistic</li>
+                <li><strong>⭐ Top Teams</strong> : Establishing a ranking of teams based on statistical performance</li>
+            <br>
+                <li><strong>- Player Analysis</strong></li> 
+                <li><strong>📊 Player Analysis</strong> : Analysis of the player of your choice through multiple statistics</li>
+                <li><strong>🥊 Player Comparison</strong> : Comparative analysis between two players in the same position</li>
+                <li><strong>🏆 Player Rankings (Aggregated Stats by Category)</strong> : Ranking players based on performance using an aggregated statistic by selected category</li>
+                <li><strong>🥇 Player Rankings (Raw Stats)</strong> : Ranking players based on performance using a selected raw statistic</li>
+                <li><strong>🔎 Scouting</strong> : Building a list of players matching the selected criteria</li>
+            </ul>
+            <br>
+
+            For more details about this project, you can access:
+            <ul>
+                <li><a href="https://github.com/football-labs/Fotball-labs/blob/main/documentation/Documentation_FR.pdf" target="_blank">Project documentation</a></li>
+                <li><a href="https://github.com/football-labs/Fotball-labs" target="_blank">Application source code</a></li>
+            </ul>
+            """, unsafe_allow_html=True
+        )
+
+        # Add images below the section
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image("image/team_analysis_en.png", caption="Team Analysis", use_container_width=True)
+        with col2:
+            st.image("image/power_ranking_en.png", caption="Power Ranking", use_container_width=True)
+
+        col3, col4 = st.columns(2)
+        with col3:
+            st.image("image/stats_players_en.png", caption="Player Analysis", use_container_width=True)
+        with col4:
+            st.image("image/player_analysis_en.png", caption="Individual Player Analysis", use_container_width=True)
+
+        st.write(
+            """
+            - **Data visualisation project analysing player performance in the five major leagues during the 24/25 season**
             <p style="text-align: justify;">
             The goal of this project is to <strong>visualize player performances during the 24/25 season</strong>.
             Originally contributed by Kaggle users, the data comes from:
