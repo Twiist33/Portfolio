@@ -96,6 +96,20 @@ if langue == "Français":
     # Section Expérience
     with st.expander("💼 Expérience"):
         logo_row(
+            "image/logo_isped.jpg",
+            """
+            <strong>Ingénieur d'études en épidémiologie et biostatistique</strong> à l'Isped/FFR (Janvier 2026 - Aujourd'hui)
+            <div style="text-align: justify;">
+            <ul>
+                <li>Aide à l'élaboration de rapports et d'études statistiques pour l'ISPED en partenariat avec la Fédération Française de Rugby sur le sujet de l'incidence des blessures dans le rugby amateur</li>
+            </ul>
+            </div>
+            """,
+            size=60,           
+            align="start"
+        )
+
+        logo_row(
             "image/logo_clermont_foot63.jpg",
             """
             <strong>Stagiaire Data Scientist</strong> au Clermont Foot 63 (Février 2024 - Juillet 2024)
@@ -481,6 +495,20 @@ else:
 
     # Experience Section
     with st.expander("💼 Experience"):
+        logo_row(
+            "image/logo_isped.jpg",
+            """
+            <strong>Research Engineer in Epidemiology and Biostatistics</strong> at ISPED/FFR (January 2026 – Present)
+            <div style="text-align: justify;">
+            <ul>
+                <li>Contributed to the development of statistical reports and studies for ISPED in partnership with the French Rugby Federation on the incidence of injuries in amateur rugby</li>
+            </ul>
+            </div>
+            """,
+            size=60,           
+            align="start"
+        )
+
         logo_row(
             "image/logo_clermont_foot63.jpg",
             """
