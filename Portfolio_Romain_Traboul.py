@@ -101,7 +101,7 @@ if langue == "Français":
             <strong>Ingénieur d'études en épidémiologie et biostatistique</strong> à l'Isped/FFR (Janvier 2026 - Aujourd'hui)
             <div style="text-align: justify;">
             <ul>
-                <li>Aide à l'élaboration de rapports et d'études statistiques pour l'Institut de santé publique, d'épidémiologie et de développement (Bordeaux)en partenariat avec la Fédération Française de Rugby sur le sujet de l'incidence des blessures dans le rugby amateur</li>
+                <li>Aide à l'élaboration de rapports et d'études statistiques pour l'Institut de santé publique, d'épidémiologie et de développement (Bordeaux) en partenariat avec la Fédération Française de Rugby sur le sujet de l'incidence des blessures dans le rugby amateur</li>
             </ul>
             </div>
             """,
