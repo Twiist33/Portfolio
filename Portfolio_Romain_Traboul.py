@@ -202,6 +202,7 @@ if langue == "Français":
 
             Pour plus de détails sur ce projet, vous avez à votre disposition :
             <ul>
+                <li><a href="https://big5-styles-of-play.streamlit.app/" target="_blank">Le lien de l'application</a></li>
                 <li><a href="https://github.com/football-labs/Fotball-labs/blob/main/documentation/Documentation_FR.pdf" target="_blank">La documentation du projet</a></li>
                 <li><a href="https://github.com/football-labs/Fotball-labs" target="_blank">Le code associé à l'application</a></li>
             </ul>
@@ -341,6 +342,7 @@ if langue == "Français":
 
             Pour plus de détails sur ce projet, vous avez à votre disposition :
             <ul>
+                <li><a href="https://expected-threat-a-league-24-25-romain-traboul.streamlit.app/" target="_blank">Le lien de l'application</a></li>
                 <li><a href="https://github.com/Twiist33/Expected_Threat/blob/main/src/documentation/Documentation_Expected_Threat_FR.pdf" target="_blank">La documentation du projet</a></li>
                 <li><a href="https://github.com/Twiist33/Expected_Threat" target="_blank">Le code associé à l'application</a></li>
                 <li><a href="https://github.com/SkillCorner/opendata" target="_blank">Le lien pour accèder aux données de PySport x SkillCorner</a></li>
@@ -537,7 +539,7 @@ else:
             size=60, align="start"
         )
 
-    # ---------- Education Section ----------
+    # Education Section
     with st.expander("🎓 Education"):
         logo_row(
             "image/digisport-logo.png",
@@ -600,6 +602,7 @@ else:
 
             For more details about this project, you can access:
             <ul>
+                <li><a href="https://big5-styles-of-play.streamlit.app/" target="_blank">Link of the application</a></li>
                 <li><a href="https://github.com/football-labs/Fotball-labs/blob/main/documentation/Documentation_FR.pdf" target="_blank">Project documentation</a></li>
                 <li><a href="https://github.com/football-labs/Fotball-labs" target="_blank">Application source code</a></li>
             </ul>
@@ -731,6 +734,7 @@ else:
 
             For more details about this project, you can access:
             <ul>
+                <li><a href="https://expected-threat-a-league-24-25-romain-traboul.streamlit.app/" target="_blank">The link of the application</a></li>
                 <li><a href="https://github.com/Twiist33/Expected_Threat/blob/main/src/documentation/Documentation_Expected_Threat_ENG.pdf" target="_blank">The project documentation</a></li>
                 <li><a href="https://github.com/Twiist33/Expected_Threat" target="_blank">The application source code</a></li>
                 <li><a href="https://github.com/SkillCorner/opendata" target="_blank">The link to PySport x SkillCorner data</a></li>
