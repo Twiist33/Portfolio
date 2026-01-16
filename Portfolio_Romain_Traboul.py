@@ -16,7 +16,7 @@ with open("Mémoire/Mémoire_Romain_Traboul.pdf", "rb") as file:
 st.set_page_config(page_title="Portfolio Romain Traboul", page_icon="🧑‍💻", layout="wide")
 
 # Titre de la page
-st.markdown("<h3 style='text-align: center;'>Portfolio de Romain Traboul</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>Portfolio Romain Traboul</h3>", unsafe_allow_html=True)
 
 # Utilisation de st.columns pour centrer l'image
 col1, col2, col3, col4, col5= st.columns([1, 1, 1, 1, 1])  # Création de trois colonnes
